@@ -36,17 +36,21 @@
             height: calc(var(--vh, 1vh) * 100); /* Safari 대응 */
             z-index: 9999;
             background: rgba(0, 0, 0, .7);
+            align-items: center;
+            justify-content: center;
             display: none;
         }
         .privacy-policy-pop.on {
-            display: block;
+            display: flex;
         }
         .privacy-policy-pop .inner {
-            position: fixed;
+            position: relative;
+            /* position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50% , -50%);
+            transform: translate(-50% , -50%); */
             width: 464px;
+            max-width: calc(100% - 20px);
             margin: 0 auto;
             max-height: 80vh;
             padding: 24px 16px 38px;
@@ -124,7 +128,7 @@
 
         @media(max-width: 768px) {
             .privacy-policy-pop .inner {
-                top: calc(50% + 24px);
+                /* top: calc(50% + 24px); */
                 max-width: calc(80% - 40px);
                 max-height: 64vh;
                 padding: 24px 20px 24px;
